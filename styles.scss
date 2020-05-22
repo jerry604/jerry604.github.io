@@ -3,12 +3,14 @@ $hair: #000000;
 $black: #000;
 $grey: #c8c8c8;
 $white: #fff;
+$brain: #FF4833;
 
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  background: $white;
 }
 
 .root {
@@ -63,35 +65,78 @@ html, body {
   .head {
     position: relative;
     width: 130px;
-    height: 160px;
+    height: 130px;
     background: $skin;
     border-radius: 30px;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 
-    .hair {
+    .forehead {
       position: absolute;
-      left: -5px;
-      width: 120px;
-      height: 50px;
+      width: 130px;
+      height: 30px;
+      background: $skin;
       border-top-left-radius: 60px;
-      border-bottom-right-radius: 80px;
-      background: $black;
-    }
+      border-top-right-radius: 40px;
+      top: -30px;
+      transition-duration: 500ms;
+      cursor: pointer;
+      outline: none;
 
-    .hairpart {
-      position: absolute;
-      right: -5px;
-      background: $black;
-      width: 20px;
-      height: 50px;
-      border-top-right-radius: 100px;
-      border-bottom-left-radius: 100px;
+      &:hover, &:focus {
+        top: -300px;
+        border: none;
+      }
+
+      .brain {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 130px;
+        height: 300px;
+        z-index: -1;
+        background: $brain;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 40px;
+
+        & > a {
+          display: block;
+          position: relative;
+          text-align: center;
+          font-size: 2rem;
+          font-weight: bold;
+          color: $white;
+        }
+        & > * + * {
+          margin-top: 2rem;
+        }
+      }
+
+      .hair {
+        position: absolute;
+        left: -5px;
+        width: 120px;
+        height: 50px;
+        border-top-left-radius: 60px;
+        border-bottom-right-radius: 80px;
+        background: $black;
+      }
+  
+      .hairpart {
+        position: absolute;
+        right: -5px;
+        background: $black;
+        width: 20px;
+        height: 50px;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+      }
     }
 
     .eye {
       position: absolute;
-      top: 70px;
+      top: 40px;
       width: 10px;
       height: 10px;
       border-radius: 50%;
@@ -129,7 +174,7 @@ html, body {
       background: $skin;
       width: 30px;
       height: 30px;
-      top: 70px;
+      top: 40px;
       left: -15px;
       border-radius: 50%;
     }
@@ -144,6 +189,15 @@ html, body {
       border-top: none;
       border-bottom-right-radius: 10px;
       border-bottom-left-radius: 10px;
+    }
+
+    .blocker {
+      position: absolute;
+      width: 150px;
+      height: 100px;
+      background: $white;
+      bottom: -30px;
+      z-index: -1;
     }
     
     .neck {
