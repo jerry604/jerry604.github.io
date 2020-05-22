@@ -120,6 +120,7 @@ html, body {
   border-top-left-radius: 60px;
   border-top-right-radius: 40px;
   overflow: hidden;
+  padding-top: 30px;
 }
 .jerry .head .forehead .brain::before {
   position: absolute;
@@ -140,6 +141,9 @@ html, body {
   font-size: 2rem;
   font-weight: bold;
   color: #fff;
+  width: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .jerry .head .forehead .brain > * + * {
   margin-top: 2rem;
