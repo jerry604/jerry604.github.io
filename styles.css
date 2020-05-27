@@ -140,10 +140,47 @@ html, body {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
+  text-decoration: none;
+  opacity: 0.8;
+  background: #000;
   color: #fff;
-  width: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   left: 50%;
   transform: translateX(-50%);
+  transition-duration: 500ms;
+}
+.jerry .head .forehead .brain > a:hover {
+  opacity: 1;
+}
+.jerry .head .forehead .brain > a#github {
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.jerry .head .forehead .brain > a#instagram::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+.jerry .head .forehead .brain > a#instagram::after {
+  position: absolute;
+  display: block;
+  content: "";
+  background: #fff;
+  width: 5px;
+  height: 5px;
+  right: 5px;
+  top: 5px;
+  border-radius: 50%;
 }
 .jerry .head .forehead .brain > * + * {
   margin-top: 2rem;
