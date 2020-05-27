@@ -76,11 +76,11 @@ html, body {
   cursor: pointer;
   outline: none;
 }
-.jerry .head .forehead:hover, .jerry .head .forehead:focus {
+.jerry .head .forehead:focus {
   top: -300px;
   border: none;
 }
-.jerry .head .forehead:hover::before, .jerry .head .forehead:focus::before {
+.jerry .head .forehead:focus::before {
   position: absolute;
   display: block;
   content: "";
@@ -93,7 +93,7 @@ html, body {
   animation: bg 1000ms infinite;
   animation-timing-function: linear;
 }
-.jerry .head .forehead:hover::after, .jerry .head .forehead:focus::after {
+.jerry .head .forehead:focus::after {
   position: fixed;
   display: block;
   content: "";
