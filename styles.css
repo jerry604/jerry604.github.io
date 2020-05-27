@@ -144,8 +144,8 @@ html, body {
   opacity: 0.8;
   background: #000;
   color: #fff;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
   left: 50%;
   transform: translateX(-50%);
@@ -154,32 +154,46 @@ html, body {
 .jerry .head .forehead .brain > a:hover {
   opacity: 1;
 }
+.jerry .head .forehead .brain > a#linkedin {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
 .jerry .head .forehead .brain > a#github {
   border-radius: 50%;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
-.jerry .head .forehead .brain > a#instagram::before {
+.jerry .head .forehead .brain > a#instagram .instagram__body {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+.jerry .head .forehead .brain > a#instagram .instagram__body::before {
   position: absolute;
   display: block;
   content: "";
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   border: 3px solid #fff;
   border-radius: 50%;
 }
-.jerry .head .forehead .brain > a#instagram::after {
+.jerry .head .forehead .brain > a#instagram .instagram__body::after {
   position: absolute;
   display: block;
   content: "";
   background: #fff;
   width: 5px;
   height: 5px;
-  right: 5px;
-  top: 5px;
+  right: 3px;
+  top: 3px;
   border-radius: 50%;
 }
 .jerry .head .forehead .brain > * + * {
